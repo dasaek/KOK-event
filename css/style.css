@@ -1,0 +1,487 @@
+@charset "utf-8";
+
+/* webfont 페이퍼로지 */
+@font-face {
+    font-family: 'Paperlogy';
+    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/2408-3@1.0/Paperlogy-4Regular.woff2') format('woff2');
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Paperlogy';
+    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/2408-3@1.0/Paperlogy-5Medium.woff2') format('woff2');
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Paperlogy';
+    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/2408-3@1.0/Paperlogy-6SemiBold.woff2') format('woff2');
+    font-weight: 600;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Paperlogy';
+    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/2408-3@1.0/Paperlogy-7Bold.woff2') format('woff2');
+    font-weight: 700;
+    font-style: normal;
+}
+
+/* ========== 기본 세팅 ========== */
+* {
+    padding: 0;
+    margin: 0;
+}
+
+ul,
+ol {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+html {
+    /* Prevent font scaling in landscape */
+
+    -webkit-text-size-adjust: none;
+    /*Chrome, Safari, newer versions of Opera*/
+
+    -moz-text-size-adjust: none;
+    /*Firefox*/
+
+    -ms-text-size-adjust: none;
+    /*Ie*/
+
+    -o-text-size-adjust: none;
+    /*old versions of Opera*/
+
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "Pretendard Variable", Pretendard, sans-serif;
+    font-size: 18px;
+    line-height: 1.5;
+    color: #222;
+    background-color: #fffae6;
+}
+
+#wrap {
+    min-width: 1360px;
+}
+
+
+/* 🧡 sidde_bar 사이드 바 ========================= */
+.side_bar {
+    position: fixed;
+    right: 30px;
+    top: 780px;
+    transform: translateY(-50%);
+
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+    z-index: 99;
+}
+
+.side_bar img {
+    display: block;
+    width: 50px;
+
+    cursor: pointer;
+}
+
+/* 🧡 header 헤더 ========================= */
+header {
+    height: 100px;
+
+    font-family: 'Paperlogy';
+    font-size: 20px;
+    font-weight: 600;
+    background-color: #fffae6;
+    color: #222;
+    border-bottom: 4px solid #ff5b38;
+
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 99;
+
+    transition:
+        transform 0.35s ease,
+        background-color 0.35s ease,
+        color 0.35s ease;
+}
+
+.inner_header {
+    width: 1780px;
+    margin: 25px auto;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    display: block;
+}
+
+/* 아래로 스크롤할 때 숨김 */
+header.header_hide {
+    transform: translateY(-100%);
+}
+
+
+/* =============== gnb 메뉴 =============== */
+.gnb {
+    display: flex;
+}
+
+.gnb li {
+    margin-left: 167px;
+
+    position: relative;
+}
+
+.gnb li a {
+    display: inline-block;
+
+    /* 꽃을 텍스트 "뒤로" 위치하기 위한 position */
+    position: relative;
+    z-index: 1;
+}
+
+.gnb li::before {
+    content: "";
+    width: 19px;
+    height: 18px;
+
+    position: absolute;
+    top: -15px;
+    right: -20px;
+    z-index: 0;
+
+    background-repeat: no-repeat;
+    background-size: contain;
+
+    transition: all 0.2s;
+    cursor: pointer;
+}
+
+.gnb li:first-child::before {
+    background-image: url(../images/header/orange_hover.svg);
+}
+
+.gnb li:nth-child(2)::before {
+    background-image: url(../images/header/blue_hover.svg);
+}
+
+.gnb li:nth-child(3)::before {
+    background-image: url(../images/header/yellow_hover.svg);
+}
+
+.gnb li:nth-child(4)::before {
+    background-image: url(../images/header/green_hover.svg);
+    transform: scale(2.8);
+    transform-origin: right top;
+}
+
+.gnb li:nth-child(5)::before {
+    background-image: url(../images/header/brown_hover.svg);
+}
+
+/* 호버 시, 꽃 커짐 */
+.gnb li:hover::before {
+    transform: scale(2.8);
+    transform-origin: right top;
+}
+
+.util {
+    display: flex;
+}
+
+.util li {
+    margin-left: 30px;
+}
+
+/* 🧡 event 이벤트 ========================= */
+#event {
+    width: 1320px;
+    margin: 295px auto 0;
+}
+
+#event h2 img {
+    display: block;
+    height: 49px;
+    margin: 0 auto 120px;
+}
+
+.tab {
+    width: 600px;
+    height: 65px;
+    margin: 0 auto 135px;
+}
+
+.tab_title {
+    display: flex;
+    width: 100%;
+    /* justify-content: space-evenly;
+    gap: 160px; */
+}
+
+.tab_title button {
+    width: 50%;
+    background-color: inherit;
+    border: none;
+    cursor: pointer;
+    font-size: 24px;
+    font-weight: 500;
+}
+
+.tab .bar {
+    width: 100%;
+    height: 5px;
+    background-color: #d9d9d9;
+    margin-top: 30px;
+
+    position: relative;
+}
+
+.move_bar {
+    display: block;
+    width: 50%;
+    height: 100%;
+    background-color: #ff5b38;
+
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    transform: translateX(0);
+    transition: transform 0.4s ease;
+}
+
+/* 당첨자 발표 선택 시 */
+.tab.best_active .move_bar {
+    transform: translateX(100%);
+}
+
+.mini_banner img {
+    display: block;
+    width: 600px;
+}
+
+.form_wrap {
+    width: 1320px;
+    display: flex;
+    justify-content: flex-end;
+    gap: 15px;
+    align-items: center;
+}
+
+.date_bar .date select,
+.search_bar input {
+    background-color: inherit;
+    border-radius: 50px;
+    border: 1px solid #222;
+
+    font-size: 16px;
+    color: #787878;
+}
+
+.date_bar .date select {
+    appearance: none;
+    cursor: pointer;
+    padding: 12px 100px 12px 15px;
+
+    background-image: url("../images/event/date_arrow.svg");
+    background-repeat: no-repeat;
+    background-position: right 12px center;
+    background-size: 12px;
+
+}
+
+.search_bar {
+    position: relative;
+}
+
+.search_bar input {
+    padding: 12px 130px 12px 16px;
+}
+
+.search_bar button {
+    background-color: inherit;
+    border: none;
+    cursor: pointer;
+
+    position: absolute;
+    top: 8px;
+    right: 20px;
+}
+
+.mini_banner_wrap1 {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 65px;
+}
+
+.mini_banner {
+    cursor: pointer;
+}
+
+.tit {
+    margin: 20px 0 5px;
+    font-weight: 600;
+}
+
+.time {
+    font-size: 14px;
+    font-weight: 500;
+    color: #787878;
+}
+
+.mini_banner_wrap2 {
+    display: none;
+    width: 100%;
+    margin-top: 65px;
+}
+
+/* 🧡 footer 풋터 ========================= */
+#footer {
+    margin-top: 200px;
+}
+
+.footer_bg {
+    width: 100%;
+    height: 400px;
+    background: url(../images/footer/footer_bg.png) no-repeat center;
+
+    position: relative;
+    /* .line의 부모 */
+}
+
+.inner_footer {
+    width: 1320px;
+    height: 400px;
+    margin: 0 auto;
+    padding-top: 56px;
+    padding-bottom: 47px;
+    box-sizing: border-box;
+
+    display: flex;
+    justify-content: space-between;
+
+    color: #ffffff;
+}
+
+.inner_footer li {
+    cursor: pointer;
+}
+
+/* 이너풋터 왼쪽 자식 */
+.left_link ul {
+    display: flex;
+    margin-bottom: 35px;
+    font-weight: 500;
+}
+
+.left_link ul li {
+    margin-right: 30px;
+}
+
+.newsletter p {
+    font-size: 24px;
+    font-weight: 700;
+
+    margin-bottom: 20px;
+}
+
+.newsletter form {
+    width: 381px;
+    height: 44px;
+    padding-left: 20px;
+    padding-right: 11px;
+    box-sizing: border-box;
+
+    background-color: #fffae6;
+    border-radius: 10px;
+
+    display: flex;
+    justify-content: space-between;
+}
+
+.newsletter input {
+    border: none;
+    background-color: transparent;
+    outline: none;
+}
+
+.newsletter button {
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+.newsletter button img {
+    display: block;
+}
+
+.newsletter input::placeholder {
+    color: #ff5b38;
+    font-size: 18px;
+}
+
+
+/* 이너풋터 오른쪽 자식 */
+.right_link {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-end;
+}
+
+.right_link ul {
+    display: flex;
+}
+
+.right_link ul li {
+    margin-left: 30px;
+}
+
+.right_link ul li img {
+    display: block;
+    width: 52px;
+}
+
+.right_link .footer_nav {
+    margin-top: 46px;
+    font-weight: 500;
+}
+
+.right_link p {
+    margin-top: 13px;
+    font-size: 12px;
+}
+
+#footer .line {
+    position: absolute;
+    top: 131px;
+    left: 0;
+    z-index: 1;
+
+    pointer-events: none;
+    /* z-index로 인해 뉴스레터 포인트가 방해되니 라인 포인트 none 하기 */
+}
+
+#footer .line img {
+    display: block;
+    width: 100%;
+}

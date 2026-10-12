@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="ko">
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=1360">
+    <!-- 브라우저 뷰포트 너비를 1360px로 고정하여 페이지를 그리도록 설정 -->
+    <title>KOK_브랜드스토리</title>
+
+    <!-- favicon -->
+    <link rel="shortcut icon" href="./images/header/favicon.ico" type="image/x-icon">
+
+    <!-- webfont 프리텐다드 연결-->
+    <link rel="stylesheet" as="style" crossorigin
+        href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css" />
+
+    <!-- css 연결-->
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+    <div id="wrap">
+
+        <!-- 🧡 sidebar 사이드바 ============================== -->
+        <ul class="side_bar">
+            <li> <img src="./images/side_bar/recent.svg" alt="recent"></li>
+            <li> <img src="./images/side_bar/chat.svg" alt="chat"></li>
+            <li> <a href="#wrap"><img src="./images/side_bar/top.svg" alt="top"></a></li>
+            <li> <a href="#footer"><img src="./images/side_bar/bottom.svg" alt="bottom"></a></li>
+        </ul>
+
+
+        <!-- 🧡  header 헤더 ============================== -->
+        <header>
+            <div class="inner_header">
+                <h1 class="logo">
+                    <a href="https://dasaek.github.io/KOK/">
+                        <img src="./images/header/logo.svg" alt="logo">
+                    </a>
+                </h1>
+
+                <ul class="gnb">
+                    <li><a href="https://dasaek.github.io/KOK-Product-Detail/">신상품</a></li>
+                    <li><a href="#">콜렉션</a></li>
+                    <li><a href="https://dasaek.github.io/KOK-Brand-story/">브랜드소개</a></li>
+                    <li><a href="#">이벤트</a></li>
+                    <li><a href="#">SNS</a></li>
+                </ul>
+
+
+                <ul class="util">
+                    <li class="search">
+                        <a href="#"><img src="./images/header/search2.svg" alt="search2"></a>
+                    </li>
+                    <li class="bag">
+                        <a href="#"><img src="./images/header/bag2.svg" alt="bag2"></a>
+                    </li>
+                    <li class="heart">
+                        <a href="#"><img src="./images/header/heart2.svg" alt="heart2"></a>
+                    </li>
+                    <li class="mypage">
+                        <a href="#"><img src="./images/header/mypage2.svg" alt="mypage2"></a>
+                    </li>
+                </ul>
+            </div>
+        </header>
+
+
+        <!-- 🧡 event 이벤트 ============================== -->
+        <div id="event">
+            <h2><img src="./images/event/EVENT.png" alt="타이틀"></h2>
+
+            <div class="tab">
+                <div class="tab_title">
+                    <button type="button" class="event_btn">이벤트</button>
+                    <button type="button" class="best_btn">당첨자 발표</button>
+                </div>
+
+                <div class="bar">
+                    <span class="move_bar"> <!-- 주황색 바 --> </span>
+                </div>
+            </div>
+
+
+            <div class="form_wrap">
+
+                <div class="date_bar">
+                    <form class="date" action="#" method="get">
+                        <select name="yy/mm" id="yy/mm">
+                            <option value="">년 / 월</option>
+                            <option value="2026-10">2026년 11월</option>
+                            <option value="2026-10">2026년 10월</option>
+                            <option value="2026-09">2026년 9월</option>
+                            <option value="2026-08">2026년 8월</option>
+                            <option value="2026-08">2026년 7월</option>
+                        </select>
+                    </form>
+                </div>
+
+                <div class="search_bar">
+                    <input type="search" name="keyword" placeholder="검색어를 입력해 주세요." aria-label="검색어">
+
+                    <button><img src="./images/event/search_icon.svg" alt="돋보기"></button>
+                </div>
+            </div>
+
+            <!-- 이벤트 배너영역1 -->
+            <div class="mini_banner_wrap1">
+
+                <div class="mini_banner fw_banner">
+                    <img src="./images/event/fw_banner.jpg" alt="겨울시즌 한정">
+
+                    <p class="tit"> [ KOK LIMITED COLLECTION ] 2026 겨울 시즌 </p>
+
+                    <span class="time"> 2026. 11. 04 - 11. 18 </span>
+                </div>
+
+                <div class="mini_banner welcome_banner">
+                    <img src="./images/event/welcome_banner.png" alt="회원가입 환영">
+
+                    <p class="tit"> [ WELCOME TO KOK ] 신규 회원을 위한 웰컴 쿠폰 </p>
+
+                    <span class="time"> 2026. 07 - </span>
+                </div>
+
+            </div>
+
+            <!-- 당첨자 배너영역2 -->
+            <div class="mini_banner_wrap2">
+                <div class="mini_banner best_banner">
+                    <img src="./images/event/best_banner.jpg" alt="9월 best">
+
+                    <p class="tit"> [ BEST KOK LOOK ] 2026 9월 포토리뷰 당첨자 </p>
+
+                    <span class="time"> 2026. 09. 01 - 09. 30 </span>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- 🧡 footer 풋터 ========================= -->
+        <div id="footer">
+
+            <div class="footer_bg">
+
+                <div class="inner_footer">
+
+                    <div class="left_link"> <!-- 이너풋터 자식1 - 왼쪽 -->
+                        <ul>
+                            <li>마이페이지</li>
+                            <li>위시리스트</li>
+                            <li>주문배송조회</li>
+                            <li>고객문의</li>
+                        </ul>
+
+                        <section class="newsletter">
+                            <p>Newsletter</p>
+
+                            <form action="" method="post">
+                                <input type="email" name="e-mail" id="em" placeholder="Enter your email">
+
+                                <button type="button">
+                                    <img src="./images/footer/email_icon.svg" alt="email_icon">
+                                </button>
+                            </form>
+                        </section>
+
+                    </div>
+
+                    <div class="right_link"> <!-- 이너풋터 자식2 - 오른쪽 -->
+                        <ul>
+                            <li><img src="./images/footer/youtube.svg" alt="youtube"></li>
+
+                            <li><img src="./images/footer/insta.svg" alt="insta"></li>
+
+                            <li><img src="./images/footer/pinterest.svg" alt="pinterest"></li>
+                        </ul>
+
+                        <ul class="footer_nav">
+                            <li><a href="https://dasaek.github.io/KOK-Brand-story/">브랜드소개</a></li>
+                            <li>전체상품</li>
+                            <li>이용약관</li>
+                            <li>개인정보처리방침</li>
+                            <li>이용안내</li>
+                        </ul>
+
+                        <p> copyright © 2026 KKOK. All rights reserved.</p>
+                    </div>
+
+                </div>
+
+                <div class="line">
+                    <img src="./images/footer/line.svg" alt="line">
+                </div>
+
+            </div>
+        </div>
+
+
+    </div>
+
+    <!-- js 오픈소스 연결 -->
+    <script src="./js/jquery-4.0.0.min.js"></script>
+
+    <!-- js link 연결 -->
+    <script src="./js/script.js"></script>
+</body>
+
+</html>
